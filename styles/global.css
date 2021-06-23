@@ -1,0 +1,101 @@
+html{
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --light-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #F6FAFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light:#E5EAF1;
+
+    /* 1rem = 16px (User Agent) ==> 100% */
+    font-size: 62.5% /* 10px */
+    /* Dica --usamos 10px pois assim podemos dividir quaisquer fontes por 10 colcando-as como rem, fica facil de utilizar: ex 32px = 3.2rem*/
+}
+
+body{
+    display: flex;
+    height: 100vh; /* view height ==> altura da tela, view widht ==> largura da tela */
+    background: var(--background); 
+}
+
+body, button, input, textarea{
+    font-size: clamp(14px, 1.6rem, 2vw);/*Dica --Intervalo de tamamho: no menor tamanho ele fica no minimo com 14px, se a tela for grande no maximo a 2vw*/
+
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{/* Dica -- o sr-only esconde o label, mais não some com ele como um display: none, assim motores*/
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*----- Input and buttons-------*/
+input, button, .button{
+    border-radius: .8rem;
+    height: 5rem;
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0; /*Dicas--  espaçamento entre as linhas do texto*/
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: var(--blue);
+    color: var(--white);
+
+    transition: .2s;
+    
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2);
+    
+}
+
+button > img 
+.button > img{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
+    
+}
