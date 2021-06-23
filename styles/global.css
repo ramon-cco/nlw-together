@@ -1,3 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 html{
     --black: #0D114F;
     --white: #FAFAFA;
@@ -68,8 +76,6 @@ button, .button{
     transition: .2s;
     
     cursor: pointer;
-
-    text-decoration: none;
 }
 
 button:hover, .button:hover{
