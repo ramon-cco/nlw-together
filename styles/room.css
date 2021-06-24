@@ -99,16 +99,23 @@
 
 .question-wrapper .question-content{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.question-wrapper .question-content .user{
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
 }
 
 .question-wrapper .question-content  p{
     margin-left: 1.6rem;
-}
-.question-wrapper .question{
+    word-break: break-word;/* Dica -- Serve para se tiver uma palavra muito grande não quebre o layout*/
     display: flex;
-    align-items: center;   
+    align-items: center;
+    min-height: 5.5rem;
 }
+
 
 .question-wrapper .actions{
     display: flex;
@@ -120,3 +127,20 @@
     display: flex;
     align-items: center;
 } 
+
+.question-wrapper .actions > a > img{
+    margin-right: .8rem;
+}
+
+.question-wrapper .actions > a + a{ /*Dica -- o seletor mais permite que pegue o irmão de a nesse caso, o segundo a*/
+    margin-left: 2.4rem;
+}
+
+/******Question Read******/
+.question-wrapper.read{
+    background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user{
+    background: var(--grey-blue);
+}
